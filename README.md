@@ -1,2 +1,40 @@
-# leetcode-solutions
-LeetCode Solutions
+# LeetCode Solutions in JavaScript
+
+This repository contains my solutions to [LeetCode](https://leetcode.com/u/dushyant-iitj/) problems in **JavaScript**, organized by difficulty.
+
+---
+
+## 📂 Structure
+
+- `javascript/` → All JS solutions
+<!-- - `java/` → All Java solutions -->
+- Each folder has `easy/`, `medium/`, and `hard/` problems.
+- Filenames follow the format:  
+  **[problem-number]-[slug].ext**  
+  Example: `0001-two-sum.js` ↔ [Two Sum](https://leetcode.com/problems/two-sum/)
+
+---
+
+## 📑 Index
+
+| #   | Title | Difficulty | Solution |
+| --- | ----- | ---------- | -------- |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | [JS](./javascript/easy/0001-two-sum.js) |
+
+## 🚀 How to Run
+
+### JavaScript
+
+```bash
+cd javascript/easy
+node 0001-two-sum.js
+```
+
+<!--
+### Java
+
+```bash
+cd java/easy
+javac 0001-two-sum.java
+java TwoSum
+``` -->

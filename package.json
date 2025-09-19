@@ -1,0 +1,17 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions to [LeetCode](https://leetcode.com/) problems in **JavaScript**, organized by difficulty.",
+  "main": "generate-readme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-readme": "node generate-readme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/leetcode-solutions.git"
+  },
+  "author": "Dushyant",
+  "license": "MIT",
+  "homepage": "https://github.com/YOUR_USERNAME/leetcode-solutions#readme"
+}
