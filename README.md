@@ -24,6 +24,7 @@ This repository contains my solutions to [LeetCode](https://leetcode.com/u/dushy
 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | [JS](./javascript/easy/0035-search-insert-position.js) |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | [JS](./javascript/easy/0070-climbing-stairs.js) |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | [JS](./javascript/easy/0088-merge-sorted-array.js) |
+| 121 | [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | [JS](./javascript/easy/0121-best-time-to-buy-and-sell-stock.js) |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | [JS](./javascript/easy/0125-valid-palindrome.js) |
 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | [JS](./javascript/easy/0136-single-number.js) |
 
