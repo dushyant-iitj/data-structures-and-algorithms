@@ -4,7 +4,7 @@
 Approach: in place update to save space, if k unique elements then answer wants first k elements of array unique and replaced in place. Also return count so created a count variable
 
 ⏲ Time Complexity:
-The loop runs once over the array (for (i=0; i<nums.length; i++)).
+The loop runs once over the array (for (i=0; i < nums.length; i++)).
 Each operation inside is O(1).
 ♻ O(n) time
 
