@@ -30,6 +30,7 @@ This repository contains my solutions to [LeetCode](https://leetcode.com/u/dushy
 | 122 | [Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium | [JS](./javascript/medium/0122-best-time-to-buy-and-sell-stock-ii.js) |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | [JS](./javascript/easy/0125-valid-palindrome.js) |
 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | [JS](./javascript/easy/0136-single-number.js) |
+| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | [JS](./javascript/easy/0169-majority-element.js) |
 
 ## 🚀 How to Run
 
