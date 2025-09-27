@@ -23,6 +23,7 @@ This repository contains my solutions to [LeetCode](https://leetcode.com/u/dushy
 | 26 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | [JS](./javascript/easy/0026-remove-duplicates-from-sorted-array.js) |
 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | [JS](./javascript/easy/0035-search-insert-position.js) |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | [JS](./javascript/easy/0070-climbing-stairs.js) |
+| 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | [JS](./javascript/medium/0075-sort-colors.js) |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | [JS](./javascript/easy/0088-merge-sorted-array.js) |
 | 121 | [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | [JS](./javascript/easy/0121-best-time-to-buy-and-sell-stock.js) |
 | 122 | [Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium | [JS](./javascript/medium/0122-best-time-to-buy-and-sell-stock-ii.js) |
