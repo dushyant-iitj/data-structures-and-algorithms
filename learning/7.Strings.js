@@ -80,6 +80,9 @@
 
 console.log("------------------");
 console.log("Q. Frequency of each character");
+console.log("Map approach");
+// Time Complexity: O(n)
+// Space Complexity: O(k) where k = unique chars
 function frequency(s) {
   const resultMap = new Map();
   for (let i = 0; i < s.length; i++) {
@@ -94,3 +97,21 @@ function frequency(s) {
 console.log(frequency("MaDam"));
 console.log(frequency("teST"));
 console.log(frequency("RacE cAr"));
+
+console.log("Ascii approach");
+// Time Complexity: O(n)
+// Space Complexity: O(1) (fixed-size array of 128)
+function frequencyAscii(s) {
+  const arr = new Array(128).fill(0);
+  for (let i = 0; i < s.length; i++) {
+    let index = s.charCodeAt(i);
+    arr[index] += 1;
+  }
+  console.log("Frequency of: " + s);
+  for (let i = 0; i < s.length; i++) {
+    console.log(`${s[i]} appears ${arr[s.charCodeAt(i)]} times`);
+  }
+}
+frequencyAscii("madam");
+frequencyAscii("test");
+frequencyAscii("race car");
