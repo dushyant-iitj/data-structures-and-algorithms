@@ -156,20 +156,123 @@
 // }
 // console.log(mergeSortedArrays(arr1, arr2));
 
+// console.log("--------------------");
+// console.log("Max profit in stocks");
+// const prices = [7, 1, 5, 3, 6, 4];
+// const maxProfit = (arr) => {
+//   let mp = 0;
+//   let min = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//     if (arr[i] > min && arr[i] - min > mp) {
+//       mp = arr[i] - min;
+//     }
+//   }
+//   return mp;
+// };
+// console.log(maxProfit(prices));
+
+// var maxProfit = function (prices) {
+//   let bought = false;
+//   let currentMin = prices[0];
+//   let profit = 0;
+
+//   for (let i = 0; i < prices.length; i++) {
+//     if (bought) {
+//       /* Sell condition
+//       if (i-1 < i && i + i < i Or i == arr.length -1)
+//       p += i - currentMin
+//       */
+//       if (
+//         (prices[i - 1] <= prices[i] && prices[i + 1] < prices[i]) ||
+//         i === prices.length - 1
+//       ) {
+//         profit += prices[i] - currentMin;
+//         bought = false;
+//       }
+//     } else {
+//       /* Buy condition
+//       if (i == 0 and i+1 > i Or i-1 > i and i+i > i)
+//       buy = true, currentMin= [i]
+//       */
+//       if (
+//         (i === 0 && prices[i + 1] > prices[i]) ||
+//         (prices[i - 1] >= prices[i] && prices[i + 1] > prices[i])
+//       ) {
+//         bought = true;
+//         currentMin = prices[i];
+//       }
+//     }
+//   }
+
+//   return profit;
+// };
+
+// const prices = [2, 2, 5];
+// console.log(maxProfit(prices));
+
+// console.log("--------------------");
+// console.log("Sort the colors");
+// const nums = [2, 0, 1];
+// const sortColors = function (nums) {
+//   let j = 0;
+//   let i = 0;
+//   let k = nums.length - 1;
+//   while (i <= k) {
+//     if (nums[i] === 0) {
+//       [nums[j], nums[i]] = [nums[i], nums[j]];
+//       j++;
+//     } else if (nums[i] === 1) {
+//       i++;
+//     } else if (nums[i] === 2) {
+//       [nums[k], nums[i]] = [nums[i], nums[k]];
+//       k--;
+//     }
+//   }
+// };
+// sortColors(nums);
+// console.log(nums);
+
+// console.log("--------------------");
+// console.log("maximum subarray");
+// const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// var maxSubArray = function (nums) {
+//   let currentMax = nums[0];
+//   let globalMax = nums[0];
+
+//   for (let i = 1; i < nums.length; i++) {
+//     console.log(`i:${i}, nums[${i}]:${nums[i]}`);
+//     console.log(`currentMax: ${currentMax}`);
+//     console.log(`globalMax: ${globalMax}`);
+//     currentMax = Math.max(nums[i], currentMax + nums[i]);
+//     globalMax = Math.max(globalMax, currentMax);
+//   }
+//   return globalMax;
+// };
+// console.log(maxSubArray(arr));
+
 console.log("--------------------");
-console.log("Max profit in stocks");
-const prices = [7, 1, 5, 3, 6, 4];
-const maxProfit = (arr) => {
-  let mp = 0;
-  let min = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-    if (arr[i] > min && arr[i] - min > mp) {
-      mp = arr[i] - min;
+console.log("majority element");
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+const a = [10, 9, 9, 9, 10];
+var majorityElement = function (nums) {
+  let candidate = nums[0];
+  let count = 1;
+  for (let i = 1; i < nums.length; i++) {
+    if (count === 0) {
+      candidate = nums[i];
+      count++;
+    } else if (nums[i] === candidate) {
+      count++;
+    } else {
+      count--;
     }
   }
-  return mp;
+  return candidate;
 };
-console.log(maxProfit(prices));
+console.log(majorityElement(a));
