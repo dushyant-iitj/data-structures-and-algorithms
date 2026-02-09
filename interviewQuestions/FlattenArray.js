@@ -17,7 +17,7 @@ console.log("Start");
 Promise.resolve(
   (() => {
     return "Step1";
-  })()
+  })(),
 )
   .then((value) => console.log(value))
   .then((value) => {

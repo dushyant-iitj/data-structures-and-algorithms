@@ -1,278 +1,208 @@
-// console.log("--------------------");
-// console.log("Q. left rotation of array by 1 element");
-// const arr = [1, 2, 3, 4, 5, 6, 7];
-// // console.log("my approach");
-// // for (let i = 0; i < arr.length - 1; i++) {
-// //   [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 1) Left rotation by 1 element ");
+// console.log("###############################");
+
+// const s = [1, 2, 3, 4, 5, 6];
+// // function leftRotation(arr) {
+// //   let i = 0;
+// //   let j = 1;
+// //   while (j < s.length) {
+// //     [s[i], s[j]] = [s[j], s[i]];
+// //     i++;
+// //     j++;
+// //   }
+// //   console.log(arr);
 // // }
-// console.log("save first element approach");
-// const firstElement = arr[0];
-// for (let i = 0; i < arr.length; i++) {
-//   if (i === arr.length - 1) {
-//     arr[i] = firstElement;
-//   } else {
+// // leftRotation(s);
+// function leftRotation(arr) {
+//   let first = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
 //     arr[i] = arr[i + 1];
 //   }
-// }
-// console.log(arr);
-
-// console.log("--------------------");
-// console.log("Q. Right rotation of array by 1 element");
-// const arr = [1, 2, 3, 4, 5, 6, 7];
-// console.log("my approach");
-// for (let i = arr.length - 1; i > 0; i--) {
-//   [arr[i], arr[i - 1]] = [arr[i - 1], arr[i]];
-// }
-// console.log(arr);
-// console.log("save last element approach");
-// const lastElement = arr[arr.length - 1];
-// for (let i = arr.length - 1; i >= 0; i--) {
-//   if (i === 0) {
-//     arr[i] = lastElement;
-//   } else {
-//     arr[i] = arr[i - 1];
-//   }
-// }
-
-// console.log("--------------------");
-// console.log("Q. Left rotation of array by 2 element");
-// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// function leftRotateArrayBy(arr, n) {
-//   for (let i = 0; i < n; i++) {
-//     [arr[i], arr[arr.length - n + i]] = [arr[arr.length - n + i], arr[i]];
-//     console.log(`i: ${i}`);
-//     console.log(arr, n);
-//   }
+//   arr[arr.length - 1] = first;
 //   console.log(arr);
 // }
-// leftRotateArrayBy(array, 4);
+// leftRotation(s);
+// //#####################################
 
-// console.log("--------------------");
-// console.log("Q. Left rotation of array by n elements");
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 2) Right rotation by 1 element ");
+// console.log("###############################");
 
-// console.log("--------------------");
-// console.log("Lecture first algo: O(n) O(n)")
-// const a = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-// function leftRotateByK(arr, k) {
-//   newArr = new Array(arr.length);
+// const s = [1, 2, 3, 4, 5, 6];
+// function rightRotation(arr) {
+//   let last = arr[arr.length - 1];
+
+//   for (let i = arr.length - 1; i >= 1; i--) {
+//     arr[i] = arr[i - 1];
+//   }
+
+//   arr[0] = last;
+//   console.log(arr);
+// }
+// rightRotation(s);
+// //#####################################
+
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 3) Left rotation by k elements ");
+// console.log("###############################");
+
+// const s = [1, 2, 3, 4, 5, 6];
+
+// function leftRotationByNElements(arr, k) {
+//   // bring in range
 //   k = k % arr.length;
-//   if (k === 0) return arr;
 
-//   for (let i = 0; i < arr.length; i++) {
-//     newArr[i] = arr[(i + k) % arr.length];
-//   }
-//   return newArr;
-// }
-// console.log(leftRotateByK(a, 1));
-// console.log(leftRotateByK(a, 2));
-// console.log(leftRotateByK(a, 3));
-// console.log(leftRotateByK(a, 4));
-// const a = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-// function rightRotateByK(arr, k) {
-//   newArr = new Array(arr.length);
-//   k = k % arr.length;
-//   if (k === 0) return arr;
+//   // // using new array space O(n)
+//   // const newArr = new Array(arr.length);
+//   // for (let i = 0; i < arr.length; i++) {
+//   //   const position = (i + k) % arr.length;
+//   //   newArr[i] = arr[position];
+//   // }
+//   // console.log(newArr);
 
-//   for (let i = 0; i < arr.length; i++) {
-//     newArr[(i + k) % arr.length] = arr[i];
-//   }
-//   return newArr;
-// }
-// console.log(rightRotateByK(a, 1));
-// console.log(rightRotateByK(a, 2));
-// console.log(rightRotateByK(a, 3));
-// console.log(rightRotateByK(a, 4));
-// console.log("--------------------");
-// console.log("Lecture first algo: O(n) O(n)")
-// const a = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-// function leftRotateByK(arr, k) {
-//   newArr = new Array(arr.length);
-//   k = k % arr.length;
-//   if (k === 0) return arr;
-
-//   for (let i = 0; i < arr.length; i++) {
-//     newArr[i] = arr[(i + k) % arr.length];
-//   }
-//   return newArr;
-// }
-// console.log(leftRotateByK(a, 1));
-// console.log(leftRotateByK(a, 2));
-// console.log(leftRotateByK(a, 3));
-// console.log(leftRotateByK(a, 4));
-
-// console.log("--------------------");
-// console.log("Block Swap Algorithm: O(n) O(1)");
-// const a = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
-// function reverse(arr, start, end) {
-//   while (start < end) {
-//     [arr[start], arr[end]] = [arr[end], arr[start]];
-//     console.log(`start:${start}, end: ${end}`);
-//     start++;
-//     end--;
-//   }
-// }
-
-// function leftRotateByK(arr, k) {
-//   l = arr.length;
-//   k = k % l;
-//   reverse(arr, 0, k - 1);
-//   reverse(arr, k, l - 1);
-//   reverse(arr, 0, l - 1);
-//   return arr;
-// }
-// console.log(leftRotateByK(a, 4) === a);
-
-// function rightRotateByK(arr, k) {
-//   l = arr.length;
-//   reverse(arr, 0, l - 1);
-//   reverse(arr, 0, k - 1);
-//   reverse(arr, k, l - 1);
-//   return arr;
-// }
-// console.log(rightRotateByK(a, 2));
-
-// console.log("--------------------");
-// console.log("Merge Sorted Array");
-// arr1 = [2, 5, 6];
-// arr2 = [1, 3, 4, 8];
-// function mergeSortedArrays(arrA, arrB) {
-//   const merge = new Array(arrA.length + arrB.length);
-//   let a = (b = k = 0);
-//   while (a < arrA.length && b < arrB.length) {
-//     if (arrA[a] < arrB[b]) {
-//       merge[k++] = arrA[a++];
-//     } else {
-//       merge[k++] = arrB[b++];
-//     }
-//   }
-//   while (a < arrA.length) {
-//     merge[k++] = arrA[a++];
-//   }
-//   while (b < arrB.length) {
-//     merge[k++] = arrB[b++];
-//   }
-//   return merge;
-// }
-// console.log(mergeSortedArrays(arr1, arr2));
-
-// console.log("--------------------");
-// console.log("Max profit in stocks");
-// const prices = [7, 1, 5, 3, 6, 4];
-// const maxProfit = (arr) => {
-//   let mp = 0;
-//   let min = arr[0];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] < min) {
-//       min = arr[i];
-//     }
-//     if (arr[i] > min && arr[i] - min > mp) {
-//       mp = arr[i] - min;
-//     }
-//   }
-//   return mp;
-// };
-// console.log(maxProfit(prices));
-
-// var maxProfit = function (prices) {
-//   let bought = false;
-//   let currentMin = prices[0];
-//   let profit = 0;
-
-//   for (let i = 0; i < prices.length; i++) {
-//     if (bought) {
-//       /* Sell condition
-//       if (i-1 < i && i + i < i Or i == arr.length -1)
-//       p += i - currentMin
-//       */
-//       if (
-//         (prices[i - 1] <= prices[i] && prices[i + 1] < prices[i]) ||
-//         i === prices.length - 1
-//       ) {
-//         profit += prices[i] - currentMin;
-//         bought = false;
-//       }
-//     } else {
-//       /* Buy condition
-//       if (i == 0 and i+1 > i Or i-1 > i and i+i > i)
-//       buy = true, currentMin= [i]
-//       */
-//       if (
-//         (i === 0 && prices[i + 1] > prices[i]) ||
-//         (prices[i - 1] >= prices[i] && prices[i + 1] > prices[i])
-//       ) {
-//         bought = true;
-//         currentMin = prices[i];
-//       }
-//     }
-//   }
-
-//   return profit;
-// };
-
-// const prices = [2, 2, 5];
-// console.log(maxProfit(prices));
-
-// console.log("--------------------");
-// console.log("Sort the colors");
-// const nums = [2, 0, 1];
-// const sortColors = function (nums) {
-//   let j = 0;
-//   let i = 0;
-//   let k = nums.length - 1;
-//   while (i <= k) {
-//     if (nums[i] === 0) {
-//       [nums[j], nums[i]] = [nums[i], nums[j]];
-//       j++;
-//     } else if (nums[i] === 1) {
+//   function reverse(i, j) {
+//     while (i < j) {
+//       [arr[i], arr[j]] = [arr[j], arr[i]];
 //       i++;
-//     } else if (nums[i] === 2) {
-//       [nums[k], nums[i]] = [nums[i], nums[k]];
-//       k--;
+//       j--;
 //     }
 //   }
-// };
-// sortColors(nums);
-// console.log(nums);
 
-// console.log("--------------------");
-// console.log("maximum subarray");
-// const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-// var maxSubArray = function (nums) {
-//   let currentMax = nums[0];
-//   let globalMax = nums[0];
+//   // in place
+//   // left arr reverse
+//   reverse(0, k - 1);
+//   // right arr reverse
+//   reverse(k, arr.length - 1);
+//   // full arr reverse
+//   reverse(0, arr.length - 1);
 
-//   for (let i = 1; i < nums.length; i++) {
-//     console.log(`i:${i}, nums[${i}]:${nums[i]}`);
-//     console.log(`currentMax: ${currentMax}`);
-//     console.log(`globalMax: ${globalMax}`);
-//     currentMax = Math.max(nums[i], currentMax + nums[i]);
-//     globalMax = Math.max(globalMax, currentMax);
+//   console.log(arr);
+// }
+
+// leftRotationByNElements(s, 2);
+// //#####################################
+
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 4) Right rotation by k elements ");
+// console.log("###############################");
+
+// const s = [1, 2, 3, 4, 5, 6];
+
+// function rightRotationByNElements(arr, k) {
+//   // bring in range
+//   k = k % arr.length;
+
+//   function reverse(i, j) {
+//     while (i < j) {
+//       [arr[i], arr[j]] = [arr[j], arr[i]];
+//       i++;
+//       j--;
+//     }
 //   }
-//   return globalMax;
-// };
-// console.log(maxSubArray(arr));
 
-console.log("--------------------");
-console.log("majority element");
-/**
- * @param {number[]} nums
- * @return {number}
- */
-const a = [10, 9, 9, 9, 10];
-var majorityElement = function (nums) {
-  let candidate = nums[0];
-  let count = 1;
-  for (let i = 1; i < nums.length; i++) {
-    if (count === 0) {
-      candidate = nums[i];
-      count++;
-    } else if (nums[i] === candidate) {
-      count++;
-    } else {
-      count--;
+//   // in place
+//   // full arr reverse
+//   reverse(0, arr.length - 1);
+//   // left arr reverse
+//   reverse(0, k - 1);
+//   // right arr reverse
+//   reverse(k, arr.length - 1);
+
+//   console.log(arr);
+// }
+
+// rightRotationByNElements(s, 4);
+// //#####################################
+
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 5) Unique elements in a sorted array ");
+// console.log("###############################");
+
+// const s = [1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 6, 6];
+
+// function uniqueElements(arr) {
+//   let j = 1;
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] !== arr[i + 1]) {
+//       arr[j] = arr[i + 1];
+//       j++;
+//     }
+//   }
+
+//   console.log(arr);
+//   console.log(`unique elements: ${j}`);
+// }
+
+// uniqueElements(s);
+// //#####################################
+
+// //#####################################
+// console.log("###############################");
+// console.log("# Q 6) merge two sorted arrays");
+// console.log("###############################");
+
+// const s = [1, 5, 8, 9];
+// const t = [2, 3, 4, 6, 7];
+
+// function mergeSortedArrays(arr1, arr2) {
+//   const arr = new Array(arr1.length + arr2.length);
+
+//   let i = (j = k = 0);
+
+//   while (k < arr.length) {
+//     if (i === arr1.length) {
+//       // arr1 ended
+//       arr[k] = arr2[j];
+//       j++;
+//     } else if (j === arr2.length) {
+//       // arr2 ended
+//       arr[k] = arr1[i];
+//       i++;
+//     } else if (arr1[i] < arr2[j]) {
+//       arr[k] = arr1[i];
+//       i++;
+//     } else {
+//       arr[k] = arr2[j];
+//       j++;
+//     }
+
+//     k++;
+//   }
+
+//   console.log(arr);
+// }
+
+// mergeSortedArrays(s, t);
+// //#####################################
+
+//#####################################
+console.log("###############################");
+console.log("# Q kadane's) max of subarray");
+console.log("###############################");
+
+const s = [-1, -2, 3, 4, -5, -3, 2, 1, 2, 3, -3, 6, -5];
+
+function maxOfSubArray(arr) {
+  let max = -Infinity;
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    max = Math.max(sum, max);
+    if (sum < 0) {
+      sum = 0;
     }
   }
-  return candidate;
-};
-console.log(majorityElement(a));
+
+  console.log(max);
+}
+
+maxOfSubArray(s);
+//#####################################
