@@ -19,7 +19,7 @@ var searchInsert = function (nums, target) {
     }
   }
 
-  if (nums[left] > target) {
+  if (nums[left] >= target) {
     return left;
   } else {
     return left + 1;
