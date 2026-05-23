@@ -1,4 +1,5 @@
-// Problem: https://leetcode.com/problems/sort-colors/
+// Difficulty: Medium
+// https://leetcode.com/problems/sort-colors/
 
 /*
 Accepted Approach: three pointers, one traverses, second tracks 0 replacement position third tracks 2 replacement position
@@ -41,3 +42,29 @@ var sortColors = function (nums) {
     }
   }
 };
+
+/*
+Brute force: sorting algorithms ( used bubble sort here )
+
+⏲ Time Complexity:
+♻ O(n²).
+
+🗒 Space Complexity:
+No additional data structures are used.
+♻ O(1) (constant space).
+*/
+// /**
+//  * @param {number[]} nums
+//  * @return {void} Do not return anything, modify nums in-place instead.
+//  */
+// var sortColors = function(nums) {
+//     if (nums.length === 0 || nums.length === 1) return;
+
+//     for(let i=0;i<nums.length-1;i++) {
+//         for(let j=0; j<nums.length-i-1;j++) {
+//             if(nums[j] > nums[j+1]) {
+//                 [nums[j],nums[j+1]]=[nums[j+1],nums[j]]
+//             }
+//         }
+//     }
+// };
