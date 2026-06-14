@@ -16,9 +16,9 @@ class Mobile {
   // But we cannot use a non-static variable inside a static method
 
   // Invalid
-  public static void show() {
-    System.out.println(name + price);
-  }
+  // public static void show() {
+  // System.out.println(name + price);
+  // }
 
   // Valid
   public static void show(Mobile mobile) {
@@ -31,17 +31,17 @@ public class StaticKeyword {
   public static void main(String[] args) {
 
     Mobile obj1 = new Mobile();
-    obj1.brand = "Oppo";
+    obj1.brand = "Apple";
     obj1.price = 12;
     Mobile.name = "Phone";
     Mobile obj2 = new Mobile();
-    obj2.brand = "Redmi";
+    obj2.brand = "Orange";
     obj2.price = 11;
 
     obj1.info();
     obj2.info();
-    obj2.show();
-    Mobile.show();
+    // obj2.show();
+    // Mobile.show();
 
   }
 
