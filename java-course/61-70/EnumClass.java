@@ -17,6 +17,9 @@ enum Laptop {
 
   private int price;
 
+  /*
+   * We using private as the objects are being created inside the class itself
+   */
   private Laptop() {
     System.out.println("in default constructor : " + this.name());
   }
