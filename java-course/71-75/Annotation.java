@@ -1,4 +1,4 @@
-public class Annotation{
+public class Annotation {
   public static void main(String args[]) {
     B obj = new B();
     obj.aVeryLongNamedFunction();
@@ -6,14 +6,14 @@ public class Annotation{
 }
 
 class A {
-  public void aVeryLongNamedFunction(){
+  public void aVeryLongNamedFunction() {
     System.out.println("in A show");
   }
 }
 
 class B extends A {
   @Override
-  public void aVeryLongNamedFunction(){
+  public void aVeryLongNamedFunction() {
     System.out.println("in B show");
   }
 }
