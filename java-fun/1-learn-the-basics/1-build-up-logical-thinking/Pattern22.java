@@ -16,53 +16,53 @@ Here, N = 4.
 
 public class Pattern22 {
   public static void main(String[] args) {
+
+    Solution solution = new Solution();
+
     int a = 5;
-    // Solution object
-    Solution sol = new Solution();
-    // call function
-    sol.theNumberPattern(a);
+
+    System.out.println("n: " + a);
+    solution.theNumberPattern(a);
   }
 }
 
 class Solution {
-  // function
   public void theNumberPattern(int n) {
-    System.out.println("int " + n + ":");
-    // row counter
+
     int x = n;
-    int xChecker = n;
+    int xSwitch = 1;
 
     while (x <= n) {
-      // column counter
+      // y
       int y = n;
-      int yChecker = n;
+      int ySwitch = 1;
 
       while (y <= n) {
-        // System.out.print(x);
-        // System.out.print(y);
-        if (x > y) {
-          System.out.print(x);
+
+        // print
+        System.out.print(Math.max(x, y));
+
+        if (ySwitch == 1) {
+          y--;
         } else {
-          System.out.print(y);
+          y++;
         }
 
-        // y logic
-        yChecker--;
-        if (yChecker < 1) {
-          y++;
-        } else {
-          y--;
+        if (y <= 1) {
+          ySwitch = 0;
         }
       }
 
       System.out.println();
 
-      // x logic
-      xChecker--;
-      if (xChecker < 1) {
-        x++;
-      } else {
+      if (xSwitch == 1) {
         x--;
+      } else {
+        x++;
+      }
+
+      if (x <= 1) {
+        xSwitch = 0;
       }
     }
   }
