@@ -40,15 +40,14 @@
 // };
 // findUniqueElement(s);
 
-// const printUniqueElement = (arr) => {
+// const printUniqueElements = (arr) => {
 //   const c = new Set();
 //   for (let i = 0; i < arr.length; i++) {
 //     c.add(arr[i]);
 //   }
 //   console.log(c.values());
 // };
-// printUniqueElement(s);
-
+// printUniqueElements(s);
 // //###################################################
 
 // //###################################################
@@ -135,16 +134,19 @@
 // const names = ["a", "b", "c", "d", "e", "f"];
 // const heights = [1, 2, 3, 4, 5, 6];
 
-// const sortPeople = (n, h) => {
+// const sortPeople = (names, height) => {
 //   const map = new Map();
-//   const newArray = new Array(n.length);
-//   for (let i = 0; i < n.length; i++) {
-//     map.set(h[i], n[i]);
+//   const newArray = new Array();
+
+//   for (let i = 0; i < names.length; i++) {
+//     map.set(height[i], names[i]);
 //   }
-//   const sortedHeights = heights.sort((a, b) => b - a);
-//   for (let i = 0; i < sortedHeights.length; i++) {
-//     newArray[i] = map.get(sortedHeights[i]);
-//   }
+//   heights.sort((a, b) => b - a).forEach((h) => newArray.push(map.get(h)));
+
+//   // // OR
+//   // const newArray = new Array(n.length);
+//   // for (let i = 0; i < sortedHeights.length; i++) {
+//   //   newArray[i] = map.get(sortedHeights[i]);
 //   return newArray;
 // };
 

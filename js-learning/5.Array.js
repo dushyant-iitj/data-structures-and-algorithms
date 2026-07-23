@@ -85,13 +85,16 @@
 //   let j = s.length - 1;
 
 //   while (i < j) {
-//     console.log([i, s[i]], [j, s[j]]);
-//     if (s[i] === 0) {
+//     // do nothing conditions
+//     if (arr[i] === 0) {
 //       i++;
-//     } else if (s[j] === 1) {
+//     } else if (arr[j] === 1) {
 //       j--;
-//     } else if (s[i] === 1 && s[j] === 0) {
-//       [s[i], s[j]] = [s[j], s[i]];
+//       // swap
+//     } else if (arr[i] === 1 && arr[j] === 0) {
+//       [arr[i], arr[j]] = [arr[j], arr[i]];
+//       i++;
+//       j--;
 //     }
 //   }
 
@@ -109,9 +112,25 @@ const a = ["interspecies", "interstellar", "interstate", "interesting"];
 function longestCommonPrefix(arr) {
   let commonString = "";
 
-  for (let i = 0; i < arr.length; i++) {}
+  for (let i = 0; i < Infinity; i++) {
+    const char = arr[0][i];
+    let counter = 0;
 
-  console.log(commonString);
+    for (let j = 0; j < arr.length; j++) {
+      if (char !== arr[j][i]) {
+        break;
+      }
+      counter++;
+    }
+
+    if (counter === arr.length) {
+      commonString = commonString + char;
+    } else {
+      break;
+    }
+  }
+
+  console.log("Answer: ", commonString);
 }
 longestCommonPrefix(a);
 //#####################################
